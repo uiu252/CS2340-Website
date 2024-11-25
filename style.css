@@ -1,51 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* main.css */
 
- * {
+/* General Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(33, 37, 41);
+    line-height: 24px;
     margin: 0;
     padding: 0;
+    text-align: left;
+    text-size-adjust: 100%;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; 
+    background-color: #f8f9fa; /* Subtle light gray background */
 }
 
-
-:root {
-    --primary: #fff;
-    --secondary: #333;
-    --main: #1787ea;
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
 }
 
-body {
-    background: var(--primary);
-    color: var(--secondary);
-    overflow-x: hidden;
+li {
+    margin-bottom: 10px;
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 7%;
-    background: #aaeaa1;
-    display: flex;
-    align-items: center;
-    z-index: 100;
+h1, h2, h4 {
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 20px;
 }
 
-.logo {
-    font-size: 25px;
-    color: var(--main-color);
-    text-decoration: none;
-    font-weight: 600;
-    cursor: default;
-    margin-right: auto;
-
+h1 {
+    font-size: 2.5rem;
 }
 
-.navbar a {
-    font-size: 18px;
+h2 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343a40; /* Dark background */
+    border-bottom: 1px solid #495057;
+}
+
+.navbar-brand {
     color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+/* Main Content */
+main {
+    margin-top: 80px; /* Space for fixed navbar */
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Links */
+a {
+    color: #007bff;
     text-decoration: none;
-    font-weight: 500;
-    margin-right: 35px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Custom List Items */
+ul li {
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size-adjust: none;
+    font-stretch: 100%;
+    font-style: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-emoji: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-variation-settings: normal;
+    unicode-bidi: isolate;
+}
+
+/* Miscellaneous */
+::-webkit-tap-highlight-color {
+    color: rgba(0, 0, 0, 0);
 }
