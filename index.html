@@ -68,118 +68,82 @@
 <p>To better understand the system and to be able to organize it visually,
   we made a Domain Model, Design Class Diagram, and Use Case Digram.
 </p>
+<title>Design & Architecture</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
 
-<title>Scroll Animation</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+  }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 auto;
-      max-width: 800px;
-      padding: 20px;
-    }
+  .section {
+    opacity: 1; /* Make the sections fully visible */
+    transform: translateY(0); /* Remove any translation */
+    text-align: center;
+    margin-bottom: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-    .section {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-      text-align: center;
-      margin-bottom: 50px;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+  .section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
 
-    .section img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
+  h4 {
+    color: #333;
+    margin-bottom: 10px;
+  }
 
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h4 {
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #666;
-      margin: 0;
-    }
-  </style>
+  p {
+    color: #666;
+    margin: 0;
+  }
+</style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="section">
-      <h4>Domain Model</h4>
-      <img src="DomainModel.png" alt="Domain Model Diagram">
-      <p>The domain model shows the different attributes and classes of the system.</p>
-    </div>
+
+<div class="container">
+  <div class="section">
+    <h4>Domain Model</h4>
+    <img src="DomainModel.png" alt="Domain Model Diagram">
+    <p>The domain model shows the different attributes and classes of the system.</p>
   </div>
+</div>
 
-  <div class="container">
-    <div class="section">
-      <h4>Design Class Diagram</h4>
-      <img src="DesignClass.png" alt="Design Class Diagram">
-      <p>Shows the different classes and their relation to other classes.</p>
-    </div>
+<div class="container">
+  <div class="section">
+    <h4>Design Class Diagram</h4>
+    <img src="DesignClass.png" alt="Design Class Diagram">
+    <p>Shows the different classes and their relation to other classes.</p>
   </div>
+</div>
 
-      <div class="container">
-        <div class="section">
-        <h4>Use Case Diagram</h4>
-        <img src="UseCase.png" alt="Use Case Diagram">
-        <p>Shows the functionality of logging in, adding a location, and how it is saved to Firestore.</p>
-        </div>
-    </div>
+<div class="container">
+  <div class="section">
+    <h4>Use Case Diagram</h4>
+    <img src="UseCase.png" alt="Use Case Diagram">
+    <p>Shows the functionality of logging in, adding a location, and how it is saved to Firestore.</p>
+  </div>
+</div>
 
-
-
-  <script>
-
-    //FIxed DCD 
+</body>
 
 
-    // Function to check if an element is in the viewport
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-
-    // Scroll event listener to handle animations
-    const sections = document.querySelectorAll('.section');
-
-    function handleScroll() {
-      sections.forEach(section => {
-        if (isInViewport(section)) {
-          section.classList.add('visible');
-        }
-      });
-    }
-
-    // Run the handler on scroll and initially to ensure visible elements are animated
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('load', handleScroll);
-  </script>
 
 <h4>Design Patterns</h4>
 
